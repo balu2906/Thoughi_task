@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "b2eb5e4c-64ac-460d-9d27-07a8d7a1595d",
+		"name": "ThoughI_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20824750"
+	},
+	"item": [
+		{
+			"name": "post orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"orderDate\": \"230482048\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item1\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item2\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    },\r\n    {\r\n        \"orderDate\": \"43324\",\r\n        \"items\": [\r\n           \r\n        ]\r\n\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/orders",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Date Validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"orderDate\": \"2022-08-21\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item1\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item2\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    },\r\n    {\r\n        \"orderDate\": \"asas2\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item3\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item4\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/orders",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "unknown",
+					"code": 601,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60-kzSjQSOCHV5Km+RqlWG1xk2anG4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:26:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Invalid\",\n    \"message\": \"Please Provide Valid Date of OrderPlacing. for Order 2\",\n    \"code\": 601\n}"
+				},
+				{
+					"name": "Success Message",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"orderDate\": \"2022-08-21\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item1\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item2\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    },\r\n    {\r\n        \"orderDate\": \"2022-08-22\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item3\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item4\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/orders",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-cRJCj7bv4evANStYsA6jtnUJaNI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:27:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"message\": \"Orders Placed SuccesFully\"\n    }\n}"
+				},
+				{
+					"name": "Item's values validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"orderDate\": \"2022-08-21\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item1\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item2\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    },\r\n    {\r\n        \"orderDate\": \"2022-08-22\",\r\n        \"items\": [\r\n            {\r\n                \"itemName\":\"item3\",\r\n                \"itemUnitPrice\":\"100\",\r\n                \"itemQuantity\":4\r\n            },\r\n            {\r\n                \"itemName\":\"item4\",\r\n                \"itemQuantity\":4\r\n            }\r\n        ]\r\n\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}api/orders",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "104"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"68-gJJhYSOjQqlhKWtVsgpUA1xe3xI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:27:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"INVALID\",\n    \"message\": \"Value Required for the field itemUnitPrice of item 2 in Order2\",\n    \"code\": 601\n}"
+				}
+			]
+		},
+		{
+			"name": "get Orders By OrderID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/orders/8",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders",
+								"8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"eb-2ZKAeMtrtY6tFF2QLgoFybBzMUk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:32:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"orderId\": 8,\n        \"orderDate\": \"2022-08-22\",\n        \"orderStatus\": 1,\n        \"collectionOfItems\": 2,\n        \"items\": [\n            {\n                \"itemId\": 19,\n                \"itemName\": \"item3\",\n                \"itemUnitPrice\": 100,\n                \"itemQuantity\": 4\n            },\n            {\n                \"itemId\": 20,\n                \"itemName\": \"item4\",\n                \"itemUnitPrice\": 100,\n                \"itemQuantity\": 4\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "Error Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/orders/sadf",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders",
+								"sadf"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-PpSu6xukQHckc3BYO9x0/rh4pqI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:36:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"INVALID\",\n    \"message\": \"Please Provide Valid Order's ID\",\n    \"code\": 400\n}"
+				}
+			]
+		},
+		{
+			"name": "get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/orders",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}api/orders",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3850"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f0a-lpLwFTwienGpB2iWnGJVG3qHas4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Aug 2022 09:33:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"orderId\": 1,\n            \"orderDate\": \"0000-00-00\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 1,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 3,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 5,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 8,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 2,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 2,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 4,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 6,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 7,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 3,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 9,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 11,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 4,\n            \"orderDate\": \"0000-00-00\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 10,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 12,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 5,\n            \"orderDate\": \"0000-00-00\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 13,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 15,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 6,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 14,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 16,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 7,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 17,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 18,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 8,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 19,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 20,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 9,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 21,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 22,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 10,\n            \"orderDate\": \"2022-08-21\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 23,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 26,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 11,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 24,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 25,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 12,\n            \"orderDate\": \"2022-08-21\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 27,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 28,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 13,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 29,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 30,\n                    \"itemName\": \"item4\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 14,\n            \"orderDate\": \"2022-08-21\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 31,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 32,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 15,\n            \"orderDate\": \"2022-08-21\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 33,\n                    \"itemName\": \"item1\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                },\n                {\n                    \"itemId\": 34,\n                    \"itemName\": \"item2\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        },\n        {\n            \"orderId\": 16,\n            \"orderDate\": \"2022-08-22\",\n            \"orderStatus\": 1,\n            \"collectionOfItems\": 2,\n            \"items\": [\n                {\n                    \"itemId\": 35,\n                    \"itemName\": \"item3\",\n                    \"itemUnitPrice\": 100,\n                    \"itemQuantity\": 4\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
